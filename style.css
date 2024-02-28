@@ -2055,6 +2055,10 @@ span.thankyou {
   .navbar-link ul.slide {
     transform: scale(1);
   }
+
+  .kelas .grid-container {
+    margin-left: 50px;
+  }
 }
 
 
