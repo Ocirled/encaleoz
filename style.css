@@ -1,0 +1,2751 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--grey-color);
+}
+
+:root {
+  --main-color: #242538;
+  --grey-color: #dfe3ee;
+  --white-color: #fefefe;
+  --blue-color: #5cd2c6;
+  --navbarSpecial-color: rgba(255, 255, 255, 0.5);
+  --navShadow-color: rgba(0, 0, 0, 0.1);
+  --greySpecial-color: #dfe3ee;
+  --footer-color: #242538;
+  --navbarDetail-color: #fefefe;
+}
+
+.dark-theme {
+  --white-color: #dfe3ee;
+  --main-color: #fefefe;
+  --grey-color: #242538;
+  --navbarSpecial-color: #242538;
+  --navShadow-color: #fefefe;
+  --greySpecial-color: #242538;
+  --navbarDetail-color: #242538;
+  --footer-color: #dfe3ee;
+}
+
+/* Navbar */
+.navbar-container {
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  background: var(--navbarSpecial-color);
+  box-shadow: 0 0 10px 1px var(--navShadow-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar-content h1 {
+  color: var(--main-color);
+  font-family: "Russo One", sans-serif;
+}
+
+.navbar-link a {
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--main-color);
+  line-height: 10px;
+  margin: 7px;
+  height: 10px;
+}
+
+.navbar-link ul {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.navbar-link ul i {
+  display: none;
+}
+
+.navbar-link a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  transform: scale(0);
+  border-bottom: 1px solid var(--main-color);
+  transition: all 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.navbar-link a:hover::after {
+  transform: scale(1);
+}
+
+.navbar-link ul {
+  list-style-type: none;
+}
+
+.moon img {
+  width: 28px;
+  position: absolute;
+  top: 15px;
+  right: 60px;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  z-index: 30;
+}
+
+.menu-toggle input {
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  z-index: 2;
+  top: -4px;
+  right: -6px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: var(--footer-color);
+  border-radius: 3px;
+  margin: 2px;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-4px, 2px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(0px, -9px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+/* Akhir navbar */
+
+/* About */
+.about {
+  margin-top: 150px;
+}
+
+.about .logo {
+  position: relative;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.about .logo img {
+  box-shadow: var(--main-color) 0px 15px 30px -10px;
+  position: relative;
+  z-index: 2;
+}
+
+.about .text h1 {
+  font-family: "Gochi Hand", cursive;
+  color: var(--main-color);
+  font-size: 40px;
+  margin: 10px auto;
+  letter-spacing: 1.3px;
+  font-weight: 600;
+}
+
+.about .text p {
+  color: var(--main-color);
+}
+
+.about .text p span {
+  display: block;
+  font-size: 20px;
+}
+
+.ngl {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ngl .ngl-wrapper .ngl-button {
+  margin-left: 30px;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background: var(--main-color);
+  border-radius: 50px;
+  box-shadow: 0 10px 10px -10px var(--main-color);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.ngl .ngl-wrapper .ngl-button:hover {
+  width: 200px;
+  height: 90px;
+  border-radius: 0;
+}
+
+.ngl-wrapper .ins-logo {
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50px;
+  font-size: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.ngl-wrapper .ins-logo a {
+  color: var(--greySpecial-color);
+}
+
+.ngl-wrapper .ngl-button span a {
+  text-decoration: none;
+  color: var(--greySpecial-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.ngl-wrapper .ngl-button span a:hover {
+  border-bottom: 1px solid var(--greySpecial-color);
+}
+
+.ngl-wrapper .ngl-button:hover .ins-logo a i {
+  color: var(--greySpecial-color);
+}
+
+/* Akhir about */
+
+/* Koordinator kelas */
+.kelas {
+  margin-top: 200px;
+}
+
+.symbol {
+  border-bottom: 2px solid var(--main-color);
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+span.person ,
+span.award {
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  color: var(--main-color);
+}
+
+span.award i {
+  margin-right: 7px;
+}
+
+span.person span ,
+span.award span {
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.kelas .grid-container {
+  display: grid;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+}
+
+.grid-container .img1::after,
+.grid-container .img2::after,
+.grid-container .img3::after,
+.grid-container .img4::after,
+.grid-container .img5::after,
+.grid-container .img6::after,
+.grid-container .img7::after {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  width: 100%;
+  height: 50%;
+}
+
+.grid-container .img1-container:hover .img1::after,
+.grid-container .img1-container:hover .img-content,
+.grid-container .img2:hover::after,
+.grid-container .img2:hover .img-content,
+.grid-container .img3-container:hover .img3::after,
+.grid-container .img3-container:hover .img-content,
+.grid-container .img4:hover::after,
+.grid-container .img4:hover .img-content,
+.grid-container .img5-container:hover .img5::after,
+.grid-container .img5-container:hover .img-content,
+.grid-container .img6:hover::after,
+.grid-container .img6:hover .img-content,
+.grid-container .img7:hover::after,
+.grid-container .img7:hover .img-content {
+  display: block;
+}
+
+.grid-container .img1 .img-content,
+.grid-container .img2 .img-content,
+.grid-container .img3 .img-content,
+.grid-container .img4 .img-content,
+.grid-container .img5 .img-content,
+.grid-container .img6 .img-content,
+.grid-container .img7 .img-content {
+  display: none;
+  position: absolute;
+  margin-bottom: 12px;
+  margin-left: 10px;
+  bottom: 0;
+  z-index: 2;
+  color: var(--white-color);
+  line-height: 15px;
+  font-size: 14px;
+}
+
+.grid-container .img1 .img-content span,
+.grid-container .img2 .img-content span,
+.grid-container .img3 .img-content span,
+.grid-container .img4 .img-content span,
+.grid-container .img5 .img-content span,
+.grid-container .img6 .img-content span,
+.grid-container .img7 .img-content span {
+  color: var(--white-color);
+}
+
+.grid-container .img1-container .img1 img,
+.grid-container .img2 img,
+.grid-container .img3-container .img3 img,
+.grid-container .img4 img,
+.grid-container .img5-container .img5 img,
+.grid-container .img6 img,
+.grid-container .img7 img {
+  border-radius: 50%;
+  border: 3px solid var(--white-color);
+}
+
+.grid-container .img1-container .img1 img {
+  width: 150px;
+}
+
+.grid-container .img2 img,
+.grid-container .img3-container img ,
+.grid-container .img5-container img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.grid-container .img6 img,
+.grid-container .img7 img {
+  object-fit: cover;
+  height: 100px;
+}
+
+.grid-container .img1,
+.grid-container .img1 img,
+.grid-container .img2,
+.grid-container .img2 img,
+.grid-container .img3,
+.grid-container .img3 img,
+.grid-container .img4,
+.grid-container .img4 img,
+.grid-container .img5,
+.grid-container .img5 img,
+.grid-container .img6,
+.grid-container .img6 img,
+.grid-container .img7,
+.grid-container .img7 img {
+  transition: all 1s ease-in-out;
+}
+
+.grid-container .img1-container:hover img {
+  width: 240px;
+  border-radius: 0;
+}
+
+.grid-container .img2:hover img,
+.grid-container .img3-container:hover img {
+  width: 210px;
+  height: 310px;
+  border-radius: 0;
+}
+
+/* Sesuaikan sama ukuran foto mreka */
+.grid-container .img4:hover img{
+  width: 200px;
+  border-radius: 0;
+}
+
+.grid-container .img5-container:hover img {
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+}
+
+.grid-container .img6:hover img,
+.grid-container .img7:hover img {
+  width: 200px;
+  height: 200px;
+  border-radius: 0;
+}
+
+.grid-container .img1-container {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  display: block;
+  margin: auto;
+  z-index: 3;
+}
+
+.grid-container .img1-container .img1 {
+  margin-right: 20px;
+  position: relative;
+}
+
+.grid-container .img2 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 5;
+}
+
+.grid-container .img3-container {
+  grid-column: 3 / 5;
+  grid-row: 1 / 2;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.grid-container .img4 {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.grid-container .img5-container {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 4;
+}
+
+.grid-container .img6 {
+  grid-column: 3 / 5;
+  grid-row: 3 / 4;
+  display: block;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.grid-container .img7 {
+  grid-column: 2 / 4;
+  grid-row: 4 / 5;
+  display: block;
+  margin: auto;
+  z-index: 1;
+}
+
+h1.another-mem {
+  text-align: center;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+.carousel {
+  margin-top: 50px;
+  width: 300px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--main-color);
+}
+
+.card-1 span.namaProfile {
+  color: var(--main-color);
+  font-size: 16px;
+}
+
+.card-motivation {
+  font-size: 15px;
+  color: var(--main-color);
+}
+
+.card-1 {
+  max-width: 300px;
+  min-height: 300px;
+  border: 3px solid var(--main-color);
+  overflow: hidden;
+}
+
+.card-1 .img-bg img {
+  border-radius: 50px;
+  border: 5px solid var(--white-color);
+  transform: translateY(40px);
+}
+
+.card-1 .img-bg {
+  background-color: var(--footer-color);
+}
+
+.social-media {
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+}
+
+.social-media a {
+  color: var(--grey-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+  opacity: 80%;
+}
+
+.birthday-cake {
+  top: 0px;
+  left: 10px;
+}
+
+.birthday-cake .cake-wrapper {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  border-radius: 50px;
+  transition: all 0.7s ease-in-out;
+}
+
+.birthday-cake .cake-wrapper {
+  width: 26px;
+}
+
+.birthday-cake .cake-wrapper:hover {
+  width: 300px;
+}
+
+.cake-wrapper svg.svgCake {
+  transition: all 0.3s ease-in-out;
+}
+
+.cake-wrapper svg.svgCake:hover {
+  opacity: 80%;
+}
+
+.tanggalBday {
+  letter-spacing: 1.5px;
+}
+
+.birthday-cake .cake-wrapper span.tanggalBday {
+  font-family: "Gochi Hand", cursive;
+  font-size: 20px;
+  color: var(--grey-color);
+}
+/* Akhir koordinator kelas */
+
+/* Perjalanan kami */
+.perjalanan-head,
+.perjalanan-head2,
+.perjalanan-head3 {
+  margin-top: 200px;
+}
+
+.prestasi-card {
+  height: 0;
+}
+
+.perjalanan-head h1,
+p {
+  color: var(--main-color);
+}
+
+.perjalanan-head3 p.fs-6 {
+  margin-top: 300px;
+}
+
+.walkBox1 {
+  margin-top: 100px;
+  height: 1200px;
+}
+
+.walkBox2 {
+  margin-top: 50px;
+  height: 2850px;
+}
+
+.walkBox3 {
+  margin-top: 50px;
+  height: 2550px;
+}
+
+.perjalanan .walkBox1 span:nth-child(1),
+.perjalanan .walkBox2 span:nth-child(1),
+.perjalanan .walkBox3 span:nth-child(1) {
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+.kelasX h6,
+.kelasX h4 {
+  color: var(--main-color);
+  text-align: center;
+}
+
+.kelasX h2 {
+  margin-top: 70px;
+  font-size: 40px;
+  color: var(--main-color);
+}
+
+.kelasX img {
+  display: block;
+  margin: 20px auto;
+  max-width: 75%;
+}
+
+.card-container .prestasi-card {
+  margin-top: 50px;
+}
+
+.overlay .isi-overlay {
+  display: block;
+  margin: auto;
+}
+
+/* Kelas X */
+.card-container .prestasi-card .photo-box-11 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  transform: rotate(-4deg) translateY(-30px);
+  position: relative;
+  z-index: 9;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-11:hover {
+  transform: scale(1.1) rotate(-4deg) translateX(20px);
+}
+
+.card-container .prestasi-card .photo-box-21 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  transform: rotate(3deg) translate(85px, -350px);
+  margin-top: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-21:hover {
+  transform: scale(1.1) rotate(3deg) translate(50px, -350px);
+}
+
+.card-container .prestasi-card .photo-box-31 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  transform: translateY(-170px);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-31:hover {
+  transform: scale(1.1) translateY(-170px);
+  z-index: 9;
+}
+
+.card-container .photo-box-11 img,
+.card-container .photo-box-21 img,
+.card-container .photo-box-31 img {
+  margin: 20px 20px 40px 20px;
+}
+
+.card-container .prestasi-card span.icon-zoom {
+  display: block;
+  width: 300px;
+  height: 200px;
+  line-height: 200px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card span.icon-zoom-31 {
+  display: block;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card a:hover span {
+  opacity: 1;
+}
+
+.overlay{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 999999;
+  transition: 0.8s;
+}
+
+.overlay:target{
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay a.arrow-right {
+  color: white;
+  bottom: -15px;
+  right: -40px;
+  font-size: 45px;
+}
+
+.overlay a.arrow-left {
+  color: white;
+  left: -40px;
+  bottom: -15px;
+  font-size: 45px;
+}
+
+.overlay a.close {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: -15px;
+  right: -10px;
+}
+
+.overlay img {
+  width: 400px;
+  height: 300px;
+}
+
+.overlay .isi-overlay .image-content h2,
+h6 {
+  margin-top: 20px;
+  padding: 15px;
+  color: white;
+}
+
+.overlay .isi-overlay .image-content p {
+  margin-top: -20px;
+  color: white;
+  padding: 15px;
+}
+
+.image-content h6 {
+  font-family: "Pacifico", sans-serif;
+  font-size: 20px;
+  bottom: -90px;
+  right: -20px;
+}
+
+.overlay img.image-beasiswa-X {
+  width: 400px;
+  height: 400px;
+}
+
+.overlay#prestasi-31 {
+  color: white;
+}
+
+.overlay a.close-beasiswa-X {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: -14px;
+  right: -10px;
+}
+
+.image-content h6.tanggal-beasiswa-X {
+  font-family: "Pacifico", sans-serif;
+  font-size: 20px;
+  bottom: -50px;
+  right: -36px;
+}
+
+a.download {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #dfe3ee;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: #242538;
+  position: absolute;
+  right: -10px;
+  top: -50px;
+  transition: all 0.3s ease-in-out;
+}
+
+a.download:hover i {
+  opacity: .8;
+}
+
+/* KELAS XI */
+.card-container .prestasi-card .photo-box-12 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  transform: rotate(-3deg) translateX(-35px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.card-container .prestasi-card .photo-box-12:hover {
+  transform: scale(1.1) translateX(-35px);
+  z-index: 2;
+}
+
+.card-container .prestasi-card .photo-box-22 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  transform: rotate(3deg) translate(35px, -105px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.card-container .prestasi-card .photo-box-22:hover {
+  transform: scale(1.1) translate(35px, -105px);
+  z-index: 3;
+}
+
+.card-container .prestasi-card .photo-box-32 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  transform: rotate(-3deg) translate(-35px, -200px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.card-container .prestasi-card .photo-box-32:hover {
+  transform: scale(1.1) translate(-35px, -200px);
+  z-index: 4;
+}
+
+.card-container .prestasi-card span.icon-zoom-32 {
+  display: block;
+  width: 300px;
+  height: 220px;
+  line-height: 220px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-42 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  transform: rotate(3deg) translate(40px, -300px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.card-container .prestasi-card .photo-box-42:hover {
+  transform: scale(1.1) translate(40px, -300px);
+  z-index: 5;
+}
+
+.card-container .prestasi-card .photo-box-52 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  transform: translateY(-400px);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.card-container .prestasi-card .photo-box-52:hover {
+  transform: scale(1.1) translateY(-400px);
+  z-index: 6;
+}
+
+.card-container .prestasi-card .photo-box-62:hover {
+  transform: scale(1.1) translate(50px, -560px);
+  z-index: 7;
+}
+.card-container .prestasi-card .photo-box-72:hover {
+  transform: scale(1.1) translate(-20px, -750px);
+  z-index: 8;
+}
+.card-container .prestasi-card .photo-box-82:hover {
+  transform: scale(1.1) translate(0, -900px);
+  z-index: 9;
+}
+.card-container .prestasi-card .photo-box-92:hover {
+  transform: scale(1.1) translate(-30px, -1050px);
+  z-index: 10;
+}
+.card-container .prestasi-card .photo-box-102:hover {
+  transform: scale(1.1) translate(-20px, -1200px);
+}
+
+.card-container .prestasi-card span.icon-zoom-52 {
+  display: block;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-62 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  transform: rotate(3deg) translate(30px, -600px);
+}
+
+.card-container .prestasi-card .photo-box-62:hover {
+  transform: scale(1.1) translate(50px, -560px);
+  z-index: 7;
+}
+
+.card-container .prestasi-card span.icon-zoom-62 {
+  display: block;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay#prestasi-62 img {
+  width: 400px;
+  height: 400px;
+}
+
+.overlay#prestasi-62 .isi-overlay .image-content h6 {
+  top: 90px;
+  right: -20px;
+}
+
+.card-container .prestasi-card .photo-box-72 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-3deg) translate(-20px, -800px);
+}
+
+.card-container .prestasi-card .photo-box-72:hover {
+  transform: scale(1.1) translate(-20px, -750px);
+  z-index: 8;
+}
+
+.card-container .prestasi-card span.icon-zoom-72 {
+  display: block;
+  width: 300px;
+  height: 260px;
+  line-height: 260px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay#prestasi-72 img {
+  width: 380px;
+  height: 380px;
+}
+
+.overlay#prestasi-72 .isi-overlay .image-content h6 {
+  top: 120px;
+  right: -20px;
+}
+
+.card-container .prestasi-card .photo-box-82 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(3deg) translate(0, -1000px);
+}
+
+.card-container .prestasi-card .photo-box-82:hover {
+  transform: scale(1.1) translate(0, -900px);
+  z-index: 9;
+}
+
+.card-container .prestasi-card span.icon-zoom-82 {
+  display: block;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay#prestasi-82 img {
+  width: 380px;
+  height: 380px;
+}
+
+.overlay#prestasi-82 .isi-overlay .image-content h6 {
+  top: 95px;
+  right: -20px;
+}
+
+.card-container .prestasi-card .photo-box-92 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-3deg) translate(0px, -1150px);
+}
+
+.card-container .prestasi-card .photo-box-92:hover {
+  transform: scale(1.1) translate(-30px, -1050px);
+  z-index: 10;
+}
+
+.card-container .prestasi-card span.icon-zoom-92 {
+  display: block;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay#prestasi-92 img {
+  width: 380px;
+  height: 380px;
+}
+
+.overlay#prestasi-92 .isi-overlay .image-content h6 {
+  top: 90px;
+  right: -20px;
+}
+
+.card-container .prestasi-card .photo-box-102 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(3deg) translate(-20px, -1300px);
+}
+
+.card-container .prestasi-card .photo-box-102:hover {
+  transform: scale(1.1) translate(-20px, -1200px);
+}
+
+.card-container .prestasi-card span.icon-zoom-102 {
+  display: block;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay#prestasi-102 img {
+  width: 380px;
+  height: 380px;
+}
+
+.overlay#prestasi-102 .isi-overlay .image-content h6 {
+  top: 90px;
+  right: -20px;
+}
+
+.card-container .photo-box-12 img,
+.card-container .photo-box-22 img,
+.card-container .photo-box-32 img,
+.card-container .photo-box-42 img,
+.card-container .photo-box-52 img,
+.card-container .photo-box-62 img,
+.card-container .photo-box-72 img,
+.card-container .photo-box-82 img,
+.card-container .photo-box-92 img,
+.card-container .photo-box-102 img,
+.card-container .photo-box-112 img {
+  margin: 20px 20px 40px 20px;
+}
+
+/* KELAS XII */
+.card-container .prestasi-card .photo-box-13 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-13:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.card-container .prestasi-card .photo-box-23 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-3deg) translate(-10px, -100px);
+}
+
+.card-container .prestasi-card .photo-box-23:hover {
+  transform: scale(1.1) translate(-10px, -100px);
+  z-index: 3;
+}
+
+.card-container .prestasi-card .photo-box-33 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(3deg) translate(40px, -350px);
+}
+
+.card-container .prestasi-card .photo-box-33:hover {
+  transform: scale(1.05) translate(40px, -350px) rotate(3deg);
+  z-index: 4;
+}
+
+.card-container .prestasi-card .photo-box-43 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transform: rotate(-3deg) translate(-10px, -550px);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-43:hover {
+  transform: rotate(-3deg) scale(1.1) translate(-10px, -500px);
+  z-index: 5;
+}
+
+.card-container .prestasi-card .photo-box-53 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transform: rotate(3deg) translate(40px, -700px);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card .photo-box-53:hover {
+  transform: rotate(3deg) scale(1.1) translate(40px, -650px);
+  z-index: 6;
+}
+
+.card-container .prestasi-card .photo-box-63 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(0deg) translate(0px, -800px);
+}
+
+.card-container .prestasi-card .photo-box-63:hover {
+  transform: scale(1.05) translate(0px, -770px);
+  z-index: 7;
+}
+
+.card-container .prestasi-card .photo-box-73 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-3deg) translate(0px, -980px);
+}
+
+.card-container .prestasi-card .photo-box-73:hover {
+  transform: scale(1.1) rotate(-3deg) translate(15px, -900px);
+  z-index: 8;
+}
+
+.card-container .prestasi-card .photo-box-83 {
+  background-color: var(--footer-color);
+  width: fit-content;
+  height: fit-content;
+  margin: 50px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0px, -1100px);
+}
+
+.card-container .prestasi-card .photo-box-83:hover {
+  transform: scale(1.1) translate(10px, -1000px);
+}
+
+.card-container .prestasi-card span.icon-zoom-13 {
+  display: block;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card span.icon-zoom-23 {
+  display: block;
+  width: 200px;
+  height: 300px;
+  line-height: 300px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card span.icon-zoom-33,
+.card-container .prestasi-card span.icon-zoom-63 {
+  display: block;
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card span.icon-zoom-43,
+.card-container .prestasi-card span.icon-zoom-53,
+.card-container .prestasi-card span.icon-zoom-73 {
+  display: block;
+  width: 250px;
+  height: 250px;
+  line-height: 250px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-container .prestasi-card span.icon-zoom-83 {
+  display: block;
+  width: 300px;
+  height: 250px;
+  line-height: 250px;
+  margin: 20px 20px 40px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay#prestasi-13 img {
+  width: 380px;
+  height: 380px;
+}
+
+.overlay#prestasi-23 img {
+  width: 300px;
+  height: 400px;
+  display: block;
+  margin: auto;
+}
+
+.overlay#prestasi-33 img,
+.overlay#prestasi-63 img,
+.overlay#prestasi-73 img {
+  width: 380px;
+  height: 380px;
+}
+
+.overlay#prestasi-43 img,
+.overlay#prestasi-53 img {
+  width: 320px;
+  height: 320px;
+}
+
+.overlay#prestasi-83 img{
+  width: 400px;
+  height: 350px;
+}
+
+.overlay#prestasi-13 .isi-overlay .image-content h6 {
+  top: 130px;
+  right: -20px;
+}
+
+.overlay#prestasi-23 .isi-overlay .image-content h6 {
+  top: 120px;
+  right: -80px;
+}
+
+.overlay#prestasi-33 .isi-overlay .image-content h6 {
+  top: 110px;
+}
+
+.overlay#prestasi-83 .isi-overlay .image-content p{
+  margin-top: 20px;
+}
+
+.overlay .isi-overlay .image-content h2 {
+  text-transform: uppercase;
+}
+
+.card-container .photo-box-13 img,
+.card-container .photo-box-23 img,
+.card-container .photo-box-33 img,
+.card-container .photo-box-43 img,
+.card-container .photo-box-53 img,
+.card-container .photo-box-63 img,
+.card-container .photo-box-73 img,
+.card-container .photo-box-83 img {
+  margin: 20px 20px 40px 20px;
+}
+
+/* AKhir perjalanan kami */
+
+/* Gallery start */
+h1#galeri {
+  color: var(--main-color);
+  text-align: center;
+  padding: 0 4px;
+  font-weight: 700;
+  border-bottom: 2px solid var(--footer-color);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.gallery-container{
+  width: 400px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+a.close-gallery{
+  color: white;
+  background-color: #242538;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.gallery-container a#fotbar,
+.gallery-container .karwis {
+  text-decoration: none;
+  color: var(--footer-color);
+  font-weight: bolder;
+}
+
+.gallery-container a#fotbar::after,
+.gallery-container .karwis span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  transform: scale(0);
+  border-bottom: 1px solid var(--main-color);
+  transition: all 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.gallery-container a#fotbar:hover::after,
+.gallery-container .karwis span:hover::after{
+  transform: scale(1);
+}
+
+.gallery-container .karwis{
+  height: 25px;
+  overflow: hidden;
+}
+
+.gallery-container .karwis ul li a{
+  display: block;
+  text-decoration: none;
+  font-weight: lighter;
+  color: var(--main-color);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.gallery-container .karwis ul li a:hover {
+  color: #3a3c5a;
+}
+
+.gallery-container .karwis:hover {
+  height: 200px;
+  overflow: visible;
+}
+
+.gallery-container .karwis::before{
+  content: ">";
+  display: inline-block;
+  transition: .3s ease-in-out;
+}
+
+.gallery-container .karwis:hover::before {
+  transform: rotate(90deg);
+}
+
+.gallery-overlay{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 999999;
+  transition: 0.8s;
+  display: flex;
+  align-items: center;
+}
+
+.gallery-overlay:target{
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-container .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.gallery-overlay .swiper-slide {
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: self-start;
+  margin-bottom: 20px;
+}
+
+.gallery-overlay .swiper-pagination-bullet,
+.gallery-overlay .swiper-pagination-bullet:active {
+  background: #fff;
+}
+
+.gallery-overlay .swiper-slide span {
+  text-transform: uppercase;
+  color: #fff;
+  background: #1b7402;
+  padding: 7px 18px 7px 25px;
+  display: inline-block;
+  border-radius: 0 20px 20px 0px;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.gallery-overlay .swiper-slide--one span,
+.gallery-overlay .swiper-slide--two span,
+.gallery-overlay .swiper-slide--17 span ,
+.gallery-overlay .swiper-slide--18 span {
+  background: #62667f;
+  margin-bottom: 20px;
+}
+
+.gallery-overlay .swiper-slide--five span ,
+.gallery-overlay .swiper-slide--seven span ,
+  .gallery-overlay .swiper-slide--fifteen span {
+  background: #62667f;
+  margin-bottom: 170px;
+}
+
+.gallery-overlay .swiper-slide--four span ,
+.gallery-overlay .swiper-slide--eight span {
+  background: #62667f;
+  margin-bottom: 150px;
+}
+
+.gallery-overlay .swiper-slide--six span,
+.gallery-overlay .swiper-slide--ten span ,
+.gallery-overlay .swiper-slide--eleven span ,
+.gallery-overlay .swiper-slide--twelve span ,
+.gallery-overlay .swiper-slide--fourteen span {
+  margin-bottom: 160px;
+  background: #62667f;
+}
+
+.gallery-overlay .swiper-slide--thirteen span,
+.gallery-overlay .swiper-slide--sixteen span{
+  background: #62667f;
+  margin-bottom: 20px;
+}
+
+.gallery-overlay .swiper-slide--three span ,
+.gallery-overlay .swiper-slide--nine span {
+  background: #62667f;
+  margin-bottom: 165px;
+}
+
+.gallery-overlay .swiper-slide h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  background: #242538;
+  padding: 7px 18px 7px 25px;
+  border-radius: 0 20px 20px 0px;
+}
+
+.overlay-gallery-img1{
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid #dfe3ee;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.gallery-overlay .swiper-slide--one img,
+.gallery-overlay .swiper-slide--two img ,
+.gallery-overlay .swiper-slide--three img ,
+.gallery-overlay .swiper-slide--five img ,
+.gallery-overlay .swiper-slide--six img ,
+.gallery-overlay .swiper-slide--seven img ,
+.gallery-overlay .swiper-slide--eight img ,
+.gallery-overlay .swiper-slide--nine img ,
+.gallery-overlay .swiper-slide--ten img ,
+.gallery-overlay .swiper-slide--eleven img ,
+.gallery-overlay .swiper-slide--twelve img ,
+.gallery-overlay .swiper-slide--thirteen img ,
+.gallery-overlay .swiper-slide--fourteen img ,
+.gallery-overlay .swiper-slide--fifteen img ,
+.gallery-overlay .swiper-slide--sixteen img ,
+.gallery-overlay .swiper-slide--17 img ,
+.gallery-overlay .swiper-slide--18 img {
+  width: 470px;
+  height: 300px;
+}
+
+.gallery-overlay .swiper-slide--four img {
+  width: 470px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0px -200px;
+}
+
+.swiper-slide--one .gallery-overlay-content,
+.swiper-slide--two .gallery-overlay-content,
+.swiper-slide--three .gallery-overlay-content,
+.swiper-slide--four .gallery-overlay-content,
+.swiper-slide--five .gallery-overlay-content,
+.swiper-slide--six .gallery-overlay-content,
+.swiper-slide--seven .gallery-overlay-content,
+.swiper-slide--eight .gallery-overlay-content,
+.swiper-slide--nine .gallery-overlay-content,
+.swiper-slide--ten .gallery-overlay-content,
+.swiper-slide--eleven .gallery-overlay-content,
+.swiper-slide--twelve .gallery-overlay-content,
+.swiper-slide--thirteen .gallery-overlay-content,
+.swiper-slide--fourteen .gallery-overlay-content,
+.swiper-slide--fifteen .gallery-overlay-content,
+.swiper-slide--sixteen .gallery-overlay-content,
+.swiper-slide--17 .gallery-overlay-content,
+.swiper-slide--18 .gallery-overlay-content{
+  position: absolute;
+  left: 4px;
+  bottom: 0;
+}
+
+.download-gallery{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  background-color: #242538;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.download-gallery a{
+  color: #fff;
+  font-size: 20px;
+  transition: all .5s ease-in-out;
+}
+
+.download-gallery a:hover{
+  font-size: 23px;
+}
+
+.gallery-overlay .swiper-3d .swiper-slide-shadow-left,
+.gallery-overlay .swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+/* Gallery end */
+
+
+h1.thankyou,
+span.thankyou {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-family: Pacifico;
+  font-size: 48px;
+}
+
+
+/* footer */
+.footer {
+  background-color: var(--footer-color);
+  margin-top: 200px;
+}
+
+.footer-main-content {
+  padding-top: 20px;
+}
+
+.footer-main-content .footer-main-left h5 {
+  color: var(--grey-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--grey-color);
+  letter-spacing: 1.2px;
+}
+
+.footer-main-content .footer-main-left span {
+  display: block;
+  color: var(--grey-color);
+  font-size: 25px;
+}
+
+.footer-main-content .footer-main-left span a {
+  text-decoration: none;
+  color: var(--blue-color);
+  font-size: 20px;
+  margin-left: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-main-content .footer-main-left span:nth-child(4) {
+  margin-top: 10px;
+}
+
+.footer-main-content .footer-main-left span a:hover {
+  opacity: 80%;
+}
+
+.footer-main-center {
+  width: 150px;
+}
+
+.footer-main-center h5.nav-bottom {
+  color: var(--grey-color);
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  border-bottom: 2px solid var(--grey-color);
+}
+
+.footer-main-center a {
+  text-decoration: none;
+  color: var(--grey-color);
+}
+
+.footer-main-center a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--grey-color);
+  width: 100%;
+  transform: scale(0);
+  transition: 0.3s linear;
+}
+
+.footer-main-center a:hover::after {
+  transform: scale(1);
+}
+
+.footer-main-bottom h6 {
+  color: var(--grey-color);
+  border-top: 2px solid var(--grey-color);
+  width: 92%;
+  text-align: center;
+}
+/* Footer end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Query */
+@media (min-width: 578px) {
+  .navbar-content h1 {
+    font-size: 25px;
+  }
+
+  .navbar-link a {
+    font-size: 13px;
+  }
+
+  .navbar-link ul {
+    margin-right: 15px;
+  }
+
+  .moon img {
+    top: 15px;
+    right: 5px;
+  }
+
+  .kelas .grid-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 150px 100px 100px 150px;
+    grid-template-rows: repeat(3, 150px);
+    row-gap: 4px;
+    column-gap: 10px;
+  }
+
+  .grid-container .img1-container .img1 img {
+    width: 210px;
+  }
+
+  .grid-container .img2 img,
+  .grid-container .img4 img,
+  .grid-container .img5 img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .grid-container .img3 img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: 0 -40px;
+  }
+
+  .grid-container .img6 img {
+    object-fit: cover;
+    object-position: 0 -180px;
+    width: 200px;
+    height: 140px;
+  }
+
+  .grid-container .img7 img {
+    object-fit: cover;
+    object-position: 0 -150px;
+    width: 200px;
+    height: 140px;
+  }
+
+  .grid-container .img2:hover img,
+  .grid-container .img4:hover img {
+    height: 304px;
+    width: 150px;
+  }
+
+  .grid-container .img6:hover img,
+  .grid-container .img7:hover img{
+    height: 220px;
+  }
+
+  .grid-container .img5-container:hover img ,
+  .grid-container .img3-container:hover img {
+    height: 200px;
+  }
+
+  .grid-container .img1-container:hover .img1 {
+    transform: translateY(30px);
+    border-radius: 0;
+  }
+
+  .grid-container .img3-container:hover .img3 {
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .grid-container .img5-container:hover .img5 {
+    transform: translateX(-40px);
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .grid-container .img1-container .img1 img,
+  .grid-container .img2 img,
+  .grid-container .img3-container .img3 img,
+  .grid-container .img4 img,
+  .grid-container .img5-container .img5 img,
+  .grid-container .img6 img,
+  .grid-container .img7 img {
+    border-radius: 0;
+  }
+
+  .grid-container .img1 .img-content,
+  .grid-container .img2 .img-content,
+  .grid-container .img3 .img-content,
+  .grid-container .img4 .img-content,
+  .grid-container .img5 .img-content,
+  .grid-container .img6 .img-content,
+  .grid-container .img7 .img-content {
+    font-size: 15px;
+  }
+
+  .grid-container .img1 .img-content,
+  .grid-container .img2 .img-content,
+  .grid-container .img3 .img-content,
+  .grid-container .img4 .img-content,
+  .grid-container .img5 .img-content,
+  .grid-container .img6 .img-content,
+  .grid-container .img7 .img-content {
+    font-size: 15px;
+  }
+
+  .grid-container .img1-container {
+    height: 210px;
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+
+  .grid-container .img1-container .img1 {
+    position: relative;
+    z-index: -1;
+  }
+
+  .grid-container .img2 {
+    width: fit-content;
+    height: fit-content;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    z-index: 4;
+  }
+
+  .grid-container .img3-container {
+    width: fit-content;
+    height: fit-content;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    position: relative;
+    z-index: 3;
+  }
+
+  .grid-container .img4 {
+    width: fit-content;
+    height: fit-content;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    z-index: 2;
+    position: relative;
+    z-index: 4;
+  }
+
+  .grid-container .img5-container {
+    width: fit-content;
+    height: fit-content;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    position: relative;
+    z-index: 3;
+  }
+
+  .grid-container .img6 {
+    width: fit-content;
+    height: fit-content;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    position: relative;
+    z-index: 1;
+  }
+
+  .grid-container .img7 {
+    width: fit-content;
+    height: fit-content;
+    grid-column: 3 / 5;
+    grid-row: 3 / 4;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-link ul {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: var(--navbarDetail-color);
+    transition: all 0.5s ease-in-out;
+    transform: scale(0);
+  }
+
+  .navbar-link ul i {
+    display: inline;
+    margin-right: 10px;
+  }
+
+  .navbar-link ul a {
+    margin: 10px;
+  }
+
+  .navbar-link ul.slide {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .about {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .about .text {
+    margin: auto;
+    font-size: 22px;
+  }
+
+  .about .logo img {
+    width: 300px;
+  }
+
+  .about .text h1 {
+    font-size: 50px;
+  }
+
+  .ngl p {
+    font-size: 23px;
+  }
+  
+  .ngl .ngl-wrapper .ngl-button {
+    margin-left: 30px;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background: var(--main-color);
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ngl .ngl-wrapper .ngl-button:hover {
+    width: 200px;
+    height: 90px;
+    border-radius: 0;
+  }
+  
+  .ngl-wrapper .ins-logo {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50px;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ngl-wrapper .ins-logo a {
+    color: var(--greySpecial-color);
+  }
+  
+  .ngl-wrapper .ngl-button span a {
+    text-decoration: none;
+    color: var(--greySpecial-color);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ngl-wrapper .ngl-button span a:hover {
+    border-bottom: 1px solid var(--greySpecial-color);
+  }
+  
+  .ngl-wrapper .ngl-button:hover .ins-logo a i {
+    color: var(--greySpecial-color);
+  }
+
+  .symbol#galeri {
+    margin-top: 100px;
+  }
+
+  .nav-link::after {
+    content: "";
+    display: block;
+    width: 5%;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.2rem solid var(--foud-color);
+    transform: scale(0);
+    transition: 0.2s linear;
+  }
+
+  .nav-link:hover::after {
+    color: var(--main-color);
+    transform: scale(0.4);
+  }
+
+  .navbar-link ul {
+    margin-right: 0px;
+  }
+
+  .navbar-link ul a{
+    font-size: 18px;
+  }
+
+  .moon img {
+    width: 35px;
+    top: 19px;
+    right: 10px;
+  }
+
+  .kelasX img {
+    width: 600px;
+  }
+
+  .walkBox1 {
+    height: 1300px;
+  }
+
+  .walkBox2 {
+    height: 3000px;
+  }
+
+  #koordinator {
+    margin-top: 100px;
+  }
+
+  .footer-heading p {
+    font-size: 20px;
+  }
+
+  .footer-main-content {
+    display: flex;
+    justify-content: space-between !important;
+  }
+
+  .footer-main-left {
+    margin-left: 50px;
+  }
+
+  .footer-main-content .footer-main-left h5 {
+    font-size: 30px;
+  }
+
+  .footer-main-content .footer-main-left span {
+    font-size: 31px;
+  }
+
+  .footer-main-content .footer-main-left span a {
+    font-size: 25px;
+  }
+
+  .footer-main-center {
+    margin-right: 50px;
+    width: 40%;
+  }
+
+  .footer-main-center h5 {
+    font-size: 30px;
+  }
+
+  .footer-main-center a {
+    font-size: 20px;
+  }
+
+  .footer-main-center a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid var(--white-color);
+    width: 50%;
+    transform: scale(0);
+    transition: 0.3s linear;
+  }
+
+  .footer-main-bottom h6 {
+    font-size: 18px;
+  }
+
+  .navbar-content h1 {
+    font-size: 45px;
+  }
+
+  .navbar-link {
+    margin-right: 15px;
+  }
+
+  .navbar-link a {
+    font-size: 20px;
+    margin: 15px;
+  }
+
+  .gallery-container{
+    width: 600px;
+    margin-top: 20px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 992px) {
+  .nav-link::after {
+    content: "";
+    display: block;
+    border-bottom: 0.2rem solid var(--foud-color);
+    padding-bottom: 0.2rem;
+    width: 100%;
+    transform: scale(0);
+    transition: 0.3s linear;
+  }
+
+  .nav-link:hover::after {
+    transform: scale(0.4);
+  }
+
+  .navbar-link {
+    margin-right: 25px;
+  }
+
+  .about {
+    margin-bottom: 100px;
+  }
+
+  .carousel {
+    width: 930px;
+  }
+
+  .kelasX img {
+    width: 80%;
+  }
+
+  .walkBox1 {
+    height: 1540px;
+  }
+
+  .walkBox2 {
+    height: 3200px;
+    margin-top: 70px;
+  }
+
+  .walkBox3 {
+    margin-top: 70px;
+  }
+
+  .perjalanan-head2 p {
+    margin-top: 500px;
+  }
+
+  .perjalanan-head3 p {
+    margin-top: 0px;
+  }
+
+  /* kelas x */
+  .card-container .prestasi-card .photo-box-11 {
+    transform: scale(1.3) rotate(-4deg) translateY(50px);
+  }
+
+  .card-container .prestasi-card .photo-box-11:hover {
+    transform: scale(1.4) rotate(-4deg) translateX(-4px);
+  }
+
+  .card-container .prestasi-card .photo-box-21 {
+    transform: scale(1.3) rotate(4deg) translate(85px, -130px);
+  }
+
+  .card-container .prestasi-card .photo-box-21:hover {
+    transform: scale(1.4) rotate(3deg) translate(100px, -135px);
+  }
+
+  .card-container .prestasi-card .photo-box-31 {
+    transform: scale(1.3) translateY(-30px);
+  }
+
+  .card-container .prestasi-card .photo-box-31:hover {
+    transform: scale(1.4) translateY(-60px);
+    z-index: 9;
+  }
+
+  .overlay img {
+    width: 500px;
+    height: 400px;
+  }
+
+  .isi-overlay .image-content h6 {
+    bottom: -70px;
+    right: -20px;
+  }
+
+  .isi-overlay .image-content h6.tanggal-beasiswa-X {
+    bottom: -50px;
+    right: -20px;
+  }
+  /* akhir kelas x */
+
+  /* kelas xi */
+  .card-container .prestasi-card .photo-box-12 {
+    transform: scale(1.3) rotate(-3deg);
+  }
+
+  .card-container .prestasi-card .photo-box-12:hover {
+    transform: scale(1.4) translateX(0px);
+    z-index: 2;
+  }
+
+  .overlay#prestasi-12 img,
+  .overlay#prestasi-22 img,
+  .overlay#prestasi-42 img,
+  .overlay#prestasi-32 img,
+  .overlay#prestasi-72 img {
+    height: 350px;
+  }
+
+  .card-container .prestasi-card .photo-box-22 {
+    transform: scale(1.3) rotate(3deg) translate(190px, -105px);
+  }
+
+  .card-container .prestasi-card .photo-box-22:hover {
+    transform: scale(1.4) translate(140px, -100px);
+    z-index: 3;
+  }
+
+  .overlay#prestasi-22 .isi-overlay .image-content h6 {
+    bottom: -60px;
+  }
+
+  .card-container .prestasi-card .photo-box-32 {
+    transform: scale(1.2) rotate(-3deg) translate(-200px, -330px);
+  }
+
+  .card-container .prestasi-card .photo-box-32:hover {
+    transform: scale(1.3) translate(-180px, -290px) rotate(-3deg);
+    z-index: 4;
+  }
+
+  .card-container .prestasi-card .photo-box-42 {
+    transform: scale(1.2) rotate(4deg) translate(40px, -350px);
+  }
+
+  .card-container .prestasi-card .photo-box-42:hover {
+    transform: scale(1.5) translate(40px, -300px);
+    z-index: 5;
+  }
+
+  .overlay#prestasi-42 .isi-overlay .image-content h6,
+  .overlay#prestasi-52 .isi-overlay .image-content h6 {
+    bottom: -55px;
+  }
+
+  .card-container .prestasi-card .photo-box-52 {
+    transform: scale(1.2) rotate(-3deg) translate(-180px, -450px);
+  }
+
+  .card-container .prestasi-card .photo-box-52:hover {
+    transform: scale(1.3) translate(-190px, -400px);
+    z-index: 6;
+  }
+
+  .card-container .prestasi-card .photo-box-62 {
+    transform: scale(1.2) rotate(0deg) translate(200px, -750px);
+  }
+
+  .card-container .prestasi-card .photo-box-62:hover {
+    transform: scale(1.4) translate(170px, -650px);
+    z-index: 7;
+  }
+
+  .card-container .prestasi-card .photo-box-72 {
+    transform: scale(1.2) rotate(3deg) translate(-120px, -800px);
+  }
+
+  .card-container .prestasi-card .photo-box-72:hover {
+    transform: scale(1.3) translate(-20px, -810px);
+    z-index: 8;
+  }
+
+  .card-container .prestasi-card .photo-box-82 {
+    transform: scale(1.2) rotate(3deg) translate(170px, -920px);
+  }
+
+  .card-container .prestasi-card .photo-box-82:hover {
+    transform: scale(1.3) translate(170px, -870px) rotate(3deg);
+    z-index: 9;
+  }
+
+  .overlay#prestasi-62 .isi-overlay .image-content h6 {
+    top: 80px;
+  }
+
+  .overlay#prestasi-82 .isi-overlay .image-content h6,
+  .overlay#prestasi-92 .isi-overlay .image-content h6,
+  .overlay#prestasi-102 .isi-overlay .image-content h6 {
+    top: 90px;
+  }
+
+  .card-container .prestasi-card .photo-box-92 {
+    transform: scale(1.2) rotate(-3deg) translate(-120px, -1200px);
+  }
+
+  .card-container .prestasi-card .photo-box-92:hover {
+    transform: scale(1.4) translate(-160px, -1050px) rotate(-3deg);
+    z-index: 10;
+  }
+
+  .card-container .prestasi-card .photo-box-102 {
+    transform: scale(1.2) rotate(0deg) translate(0px, -1300px);
+  }
+
+  .card-container .prestasi-card .photo-box-102:hover {
+    transform: scale(1.3) translate(0px, -1200px);
+  }
+
+  .overlay#prestasi-12,
+  .overlay#prestasi-22,
+  .overlay#prestasi-32,
+  .overlay#prestasi-42,
+  .overlay#prestasi-52,
+  .overlay#prestasi-62,
+  .overlay#prestasi-72,
+  .overlay#prestasi-82,
+  .overlay#prestasi-92,
+  .overlay#prestasi-102 {
+    transform: scale(1.1);
+  }
+  /* akhir kelas xi */
+
+  /* kelas xii */
+  .card-container .prestasi-card .photo-box-13 {
+    transform: scale(1.2);
+    position: relative;
+  }
+  .card-container .prestasi-card .photo-box-13:hover {
+    transform: scale(1.3);
+    z-index: 3;
+  }
+
+  .card-container .prestasi-card .photo-box-23 {
+    transform: scale(1.2) rotate(-3deg) translate(-70px, -150px);
+    position: relative;
+    z-index: 2;
+  }
+  .card-container .prestasi-card .photo-box-23:hover {
+    transform: scale(1.3) rotate(-3deg) translate(-70px, -150px);
+  }
+
+  .card-container .prestasi-card .photo-box-33 {
+    transform: scale(1.2) rotate(3deg) translate(60px, -490px);
+  }
+  .card-container .prestasi-card .photo-box-33:hover {
+    transform: scale(1.3) rotate(3deg) translate(60px, -468px);
+  }
+
+  .card-container .prestasi-card .photo-box-43 {
+    transform: scale(1.2) rotate(3deg) translate(250px, -480px);
+  }
+  .card-container .prestasi-card .photo-box-43:hover {
+    transform: scale(1.3) rotate(3deg) translate(220px, -480px);
+  }
+
+  .card-container .prestasi-card .photo-box-53 {
+    transform: scale(1.2) rotate(-3deg) translate(-200px, -780px);
+  }
+  .card-container .prestasi-card .photo-box-53:hover {
+    transform: scale(1.3) rotate(-3deg) translate(-160px, -740px);
+  }
+
+  .card-container .prestasi-card .photo-box-63 {
+    transform: scale(1.2) translateY(-1080px);
+  }
+  .card-container .prestasi-card .photo-box-63:hover {
+    transform: scale(1.3) translateY(-1080px);
+  }
+
+  .card-container .prestasi-card .photo-box-73 {
+    transform: scale(1.2) translate(-200px, -1108px);
+  }
+  .card-container .prestasi-card .photo-box-73:hover {
+    transform: scale(1.3) translate(-180px, -1056px);
+  }
+
+  .card-container .prestasi-card .photo-box-83 {
+    transform: scale(1.2) translate(190px, -1406px);
+  }
+  .card-container .prestasi-card .photo-box-83:hover {
+    transform: scale(1.3) translate(185px, -1306px);
+  }
+
+  .overlay#prestasi-13 .isi-overlay .image-content h6 {
+    top: 140px;
+  }
+  /* akhir kelas xii */
+
+  .gallery-container{
+    width: 800px;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  .footer-main-content .footer-main-left h5,
+  .footer-main-content .footer-main-center h5 {
+    font-size: 35px;
+  }
+
+  .footer-main-content .footer-main-left span,
+  .footer-main-content .footer-main-left span a {
+    font-size: 30px;
+  }
+
+  .footer-main-content .footer-main-center a {
+    font-size: 27px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1368px) {
+  .about {
+    text-align: center;
+  }
+
+  .about .text p span {
+    font-size: 32px;
+  }
+
+  .about .text {
+    width: 100%;
+    font-size: 32px;
+  }
+
+  .about .logo img {
+    width: 300px;
+  }
+
+  .about .text h1 {
+    font-size: 60px;
+  }
+
+  .ngl p {
+    font-size: 30px;
+  }
+
+  .ngl .ngl-wrapper .ngl-button {
+    width: 120px;
+    height: 70px;
+    line-height: 70px;
+  }
+
+  .ngl .ngl-wrapper .ngl-button span a {
+    font-size: 25px;
+  }
+
+  .ngl .ngl-wrapper .ngl-button:hover {
+    width: 280px;
+    height: 120px;
+    line-height: 70px;
+  }
+
+  .ngl-wrapper .ins-logo {
+    width: 60px;
+    height: 60px;
+    line-height: 70px;
+    border-radius: 50px;
+    font-size: 40px;
+  }
+
+  .kelas .grid-container {
+    row-gap: 50px;
+    column-gap: 50px;
+  }
+
+  .grid-container .img1-container .img1 img {
+    width: 290px;
+  }
+
+  .grid-container .img2 img,
+  .grid-container .img3 img,
+  .grid-container .img4 img,
+  .grid-container .img5 img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .grid-container .img2:hover img,
+  .grid-container .img4:hover img {
+    height: 390px;
+    width: 190px;
+  }
+
+  .grid-container .img6:hover img,
+  .grid-container .img7:hover img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .grid-container .img3-container:hover .img3 {
+    transform: translateX(240px);
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .grid-container .img5-container:hover .img5 {
+    transform: translateX(-253px);
+    height: fit-content;
+    width: fit-content;
+  }
+
+  .kelasX img {
+    width: 70%;
+  }
+  .walkBox2 {
+    margin-top: 350px;
+  }
+  .walkBox3 {
+    margin-top: 350px;
+  }
+}
+
+/* Tombol keatas */
+.button-up{
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 27px;
+  background-color: var(--footer-color);
+  border-radius: 50%;
+  text-align: center;
+  position: fixed;
+  z-index: 9;
+  bottom: 20px;
+  right: 10px;
+  animation: bounce 5s ease-in-out 1s infinite alternate;
+  box-shadow: 1px 3px 7px 2px var(--grey-color);
+}
+
+.invisibility {
+  visibility: hidden;
+}
+
+.button-up a{
+  text-decoration: none;
+  color: var(--grey-color);
+}
+
+@keyframes bounce {
+  20%,to{
+    transform: translateY(0);
+  }
+
+  40%{
+    transform: translateY(-15px);
+  }
+
+  90%{
+    transform: translateY(4px);
+  }
+}
