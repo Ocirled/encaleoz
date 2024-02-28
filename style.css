@@ -601,17 +601,17 @@ p {
 
 .walkBox1 {
   margin-top: 100px;
-  height: 1200px;
+  height: 1000px;
 }
 
 .walkBox2 {
   margin-top: 50px;
-  height: 2850px;
+  height: 1850px;
 }
 
 .walkBox3 {
   margin-top: 50px;
-  height: 2550px;
+  height: 1900px;
 }
 
 .perjalanan .walkBox1 span:nth-child(1),
@@ -639,10 +639,6 @@ p {
   max-width: 75%;
 }
 
-.card-container .prestasi-card {
-  margin-top: 50px;
-}
-
 .overlay .isi-overlay {
   display: block;
   margin: auto;
@@ -653,27 +649,27 @@ p {
   background-color: var(--footer-color);
   width: fit-content;
   height: fit-content;
-  transform: rotate(-4deg) translateY(-30px);
+  transform: rotate(-4deg) translateY(-30px) scale(.7);
   position: relative;
   z-index: 9;
   transition: all 0.3s ease-in-out;
 }
 
 .card-container .prestasi-card .photo-box-11:hover {
-  transform: scale(1.1) rotate(-4deg) translateX(20px);
+  transform: scale(.9) rotate(-4deg) translateX(20px);
 }
 
 .card-container .prestasi-card .photo-box-21 {
   background-color: var(--footer-color);
   width: fit-content;
   height: fit-content;
-  transform: rotate(3deg) translate(85px, -350px);
+  transform: rotate(3deg) translate(85px, -360px) scale(.7);
   margin-top: 50px;
   transition: all 0.3s ease-in-out;
 }
 
 .card-container .prestasi-card .photo-box-21:hover {
-  transform: scale(1.1) rotate(3deg) translate(50px, -350px);
+  transform: scale(.9) rotate(3deg) translate(50px, -350px);
 }
 
 .card-container .prestasi-card .photo-box-31 {
@@ -681,12 +677,12 @@ p {
   width: fit-content;
   height: fit-content;
   margin: 50px;
-  transform: translateY(-170px);
+  transform: translateY(-190px) scale(.7);
   transition: all 0.3s ease-in-out;
 }
 
 .card-container .prestasi-card .photo-box-31:hover {
-  transform: scale(1.1) translateY(-170px);
+  transform: scale(.9) translateY(-170px);
   z-index: 9;
 }
 
@@ -762,7 +758,7 @@ p {
   font-size: 45px;
 }
 
-.overlay a.close {
+.overlay a.close-x {
   text-align: center;
   font-size: 20px;
   color: black;
@@ -770,13 +766,15 @@ p {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  top: -15px;
-  right: -10px;
+  top: -10px;
+  right: 10px;
 }
 
 .overlay img {
-  width: 400px;
-  height: 300px;
+  width: 350px;
+  height: 250px;
+  margin: 0 auto;
+  display: block;
 }
 
 .overlay .isi-overlay .image-content h2,
@@ -784,6 +782,7 @@ h6 {
   margin-top: 20px;
   padding: 15px;
   color: white;
+  font-size: 20px;
 }
 
 .overlay .isi-overlay .image-content p {
@@ -800,8 +799,8 @@ h6 {
 }
 
 .overlay img.image-beasiswa-X {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .overlay#prestasi-31 {
@@ -817,7 +816,7 @@ h6 {
   width: 30px;
   height: 30px;
   top: -14px;
-  right: -10px;
+  right: -14px;
 }
 
 .image-content h6.tanggal-beasiswa-X {
@@ -825,6 +824,54 @@ h6 {
   font-size: 20px;
   bottom: -50px;
   right: -36px;
+}
+
+a.download-x {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #dfe3ee;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: #242538;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  transition: all 0.3s ease-in-out;
+}
+a.download-beasiswa {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: #dfe3ee;
+  font-size: 25px;
+  border-radius: 50%;
+  background-color: #242538;
+  position: absolute;
+  right: -20px;
+  top: -50px;
+  transition: all 0.3s ease-in-out;
+}
+
+a.download:hover i {
+  opacity: .8;
+}
+
+/* KELAS XI */
+.overlay a.close {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  top: -10px;
+  right: -10px;
 }
 
 a.download {
@@ -838,28 +885,23 @@ a.download {
   border-radius: 50%;
   background-color: #242538;
   position: absolute;
-  right: -10px;
+  right: -20px;
   top: -50px;
   transition: all 0.3s ease-in-out;
 }
 
-a.download:hover i {
-  opacity: .8;
-}
-
-/* KELAS XI */
 .card-container .prestasi-card .photo-box-12 {
   background-color: var(--footer-color);
   width: fit-content;
   height: fit-content;
   margin: 50px;
-  transform: rotate(-3deg) translateX(-35px);
+  transform: rotate(-3deg) translateX(-35px) scale(.7);
   transition: all 0.3s ease-in-out;
   position: relative;
 }
 
 .card-container .prestasi-card .photo-box-12:hover {
-  transform: scale(1.1) translateX(-35px);
+  transform: scale(.9) translateX(-35px);
   z-index: 2;
 }
 
@@ -868,13 +910,13 @@ a.download:hover i {
   width: fit-content;
   height: fit-content;
   margin: 50px;
-  transform: rotate(3deg) translate(35px, -105px);
+  transform: rotate(3deg) translate(35px, -135px) scale(.7);
   transition: all 0.3s ease-in-out;
   position: relative;
 }
 
 .card-container .prestasi-card .photo-box-22:hover {
-  transform: scale(1.1) translate(35px, -105px);
+  transform: scale(.9) translate(35px, -185px);
   z-index: 3;
 }
 
@@ -883,13 +925,13 @@ a.download:hover i {
   width: fit-content;
   height: fit-content;
   margin: 50px;
-  transform: rotate(-3deg) translate(-35px, -200px);
+  transform: rotate(-3deg) translate(-35px, -290px) scale(.7);
   transition: all 0.3s ease-in-out;
   position: relative;
 }
 
 .card-container .prestasi-card .photo-box-32:hover {
-  transform: scale(1.1) translate(-35px, -200px);
+  transform: scale(.9) translate(-35px, -340px);
   z-index: 4;
 }
 
@@ -912,13 +954,13 @@ a.download:hover i {
   width: fit-content;
   height: fit-content;
   margin: 50px;
-  transform: rotate(3deg) translate(40px, -300px);
+  transform: rotate(3deg) translate(40px, -500px) scale(.7);
   transition: all 0.3s ease-in-out;
   position: relative;
 }
 
 .card-container .prestasi-card .photo-box-42:hover {
-  transform: scale(1.1) translate(40px, -300px);
+  transform: scale(.9) translate(40px, -550px);
   z-index: 5;
 }
 
@@ -927,34 +969,14 @@ a.download:hover i {
   width: fit-content;
   height: fit-content;
   margin: 50px;
-  transform: translateY(-400px);
+  transform: translateY(-700px) scale(.7);
   transition: all 0.3s ease-in-out;
   position: relative;
 }
 
 .card-container .prestasi-card .photo-box-52:hover {
-  transform: scale(1.1) translateY(-400px);
+  transform: scale(.9) translateY(-750px);
   z-index: 6;
-}
-
-.card-container .prestasi-card .photo-box-62:hover {
-  transform: scale(1.1) translate(50px, -560px);
-  z-index: 7;
-}
-.card-container .prestasi-card .photo-box-72:hover {
-  transform: scale(1.1) translate(-20px, -750px);
-  z-index: 8;
-}
-.card-container .prestasi-card .photo-box-82:hover {
-  transform: scale(1.1) translate(0, -900px);
-  z-index: 9;
-}
-.card-container .prestasi-card .photo-box-92:hover {
-  transform: scale(1.1) translate(-30px, -1050px);
-  z-index: 10;
-}
-.card-container .prestasi-card .photo-box-102:hover {
-  transform: scale(1.1) translate(-20px, -1200px);
 }
 
 .card-container .prestasi-card span.icon-zoom-52 {
@@ -978,11 +1000,11 @@ a.download:hover i {
   margin: 50px;
   transition: all 0.3s ease-in-out;
   position: relative;
-  transform: rotate(3deg) translate(30px, -600px);
+  transform: rotate(3deg) translate(30px, -980px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-62:hover {
-  transform: scale(1.1) translate(50px, -560px);
+  transform: scale(.9) translate(50px, -1030px);
   z-index: 7;
 }
 
@@ -1001,8 +1023,8 @@ a.download:hover i {
 }
 
 .overlay#prestasi-62 img {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 }
 
 .overlay#prestasi-62 .isi-overlay .image-content h6 {
@@ -1017,11 +1039,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(-3deg) translate(-20px, -800px);
+  transform: rotate(-3deg) translate(40px, -1250px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-72:hover {
-  transform: scale(1.1) translate(-20px, -750px);
+  transform: scale(.9) translate(-20px, -1300px);
   z-index: 8;
 }
 
@@ -1040,8 +1062,8 @@ a.download:hover i {
 }
 
 .overlay#prestasi-72 img {
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 300px;
 }
 
 .overlay#prestasi-72 .isi-overlay .image-content h6 {
@@ -1056,11 +1078,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(3deg) translate(0, -1000px);
+  transform: rotate(3deg) translate(-20px, -1500px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-82:hover {
-  transform: scale(1.1) translate(0, -900px);
+  transform: scale(.9) translate(0, -1700px);
   z-index: 9;
 }
 
@@ -1079,8 +1101,8 @@ a.download:hover i {
 }
 
 .overlay#prestasi-82 img {
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 300px;
 }
 
 .overlay#prestasi-82 .isi-overlay .image-content h6 {
@@ -1095,11 +1117,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(-3deg) translate(0px, -1150px);
+  transform: rotate(-3deg) translate(50px, -1750px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-92:hover {
-  transform: scale(1.1) translate(-30px, -1050px);
+  transform: scale(.9) translate(-30px, -1900px);
   z-index: 10;
 }
 
@@ -1118,8 +1140,8 @@ a.download:hover i {
 }
 
 .overlay#prestasi-92 img {
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 300px;
 }
 
 .overlay#prestasi-92 .isi-overlay .image-content h6 {
@@ -1134,11 +1156,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(3deg) translate(-20px, -1300px);
+  transform: rotate(3deg) translate(-50px, -2000px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-102:hover {
-  transform: scale(1.1) translate(-20px, -1200px);
+  transform: scale(.9) translate(0px, -2200px);
 }
 
 .card-container .prestasi-card span.icon-zoom-102 {
@@ -1156,8 +1178,8 @@ a.download:hover i {
 }
 
 .overlay#prestasi-102 img {
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 300px;
 }
 
 .overlay#prestasi-102 .isi-overlay .image-content h6 {
@@ -1187,10 +1209,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
+  transform: scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-13:hover {
-  transform: scale(1.05);
+  transform: scale(.9);
   z-index: 2;
 }
 
@@ -1201,11 +1224,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(-3deg) translate(-10px, -100px);
+  transform: rotate(-3deg) translate(-10px, -240px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-23:hover {
-  transform: scale(1.1) translate(-10px, -100px);
+  transform: scale(.9) translate(-10px, -290px);
   z-index: 3;
 }
 
@@ -1216,11 +1239,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(3deg) translate(40px, -350px);
+  transform: rotate(3deg) translate(40px, -590px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-33:hover {
-  transform: scale(1.05) translate(40px, -350px) rotate(3deg);
+  transform: scale(.9) translate(40px, -640px) rotate(3deg);
   z-index: 4;
 }
 
@@ -1230,12 +1253,12 @@ a.download:hover i {
   height: fit-content;
   margin: 50px;
   position: relative;
-  transform: rotate(-3deg) translate(-10px, -550px);
+  transform: rotate(-3deg) translate(-10px, -820px) scale(.7);
   transition: all 0.3s ease-in-out;
 }
 
 .card-container .prestasi-card .photo-box-43:hover {
-  transform: rotate(-3deg) scale(1.1) translate(-10px, -500px);
+  transform: rotate(-3deg) scale(.9) translate(-10px, -870px);
   z-index: 5;
 }
 
@@ -1245,12 +1268,12 @@ a.download:hover i {
   height: fit-content;
   margin: 50px;
   position: relative;
-  transform: rotate(3deg) translate(40px, -700px);
+  transform: rotate(3deg) translate(40px, -1150px) scale(.7);
   transition: all 0.3s ease-in-out;
 }
 
 .card-container .prestasi-card .photo-box-53:hover {
-  transform: rotate(3deg) scale(1.1) translate(40px, -650px);
+  transform: rotate(3deg) scale(.9) translate(40px, -1250px);
   z-index: 6;
 }
 
@@ -1261,11 +1284,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(0deg) translate(0px, -800px);
+  transform: rotate(0deg) translate(0px, -1350px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-63:hover {
-  transform: scale(1.05) translate(0px, -770px);
+  transform: scale(.9) translate(0px, -1500px);
   z-index: 7;
 }
 
@@ -1276,11 +1299,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(-3deg) translate(0px, -980px);
+  transform: rotate(-3deg) translate(40px, -1600px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-73:hover {
-  transform: scale(1.1) rotate(-3deg) translate(15px, -900px);
+  transform: scale(.9) rotate(-3deg) translate(15px, -1800px);
   z-index: 8;
 }
 
@@ -1291,11 +1314,11 @@ a.download:hover i {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: translate(0px, -1100px);
+  transform: translate(0px, -1800px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-83:hover {
-  transform: scale(1.1) translate(10px, -1000px);
+  transform: scale(.9) translate(10px, -2000px);
 }
 
 .card-container .prestasi-card span.icon-zoom-13 {
@@ -1372,13 +1395,15 @@ a.download:hover i {
 }
 
 .overlay#prestasi-13 img {
-  width: 380px;
-  height: 380px;
+  width: 350px;
+  height: 350px;
 }
 
 .overlay#prestasi-23 img {
   width: 300px;
-  height: 400px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
   display: block;
   margin: auto;
 }
@@ -1386,8 +1411,8 @@ a.download:hover i {
 .overlay#prestasi-33 img,
 .overlay#prestasi-63 img,
 .overlay#prestasi-73 img {
-  width: 380px;
-  height: 380px;
+  width: 300px;
+  height: 300px;
 }
 
 .overlay#prestasi-43 img,
@@ -1397,8 +1422,8 @@ a.download:hover i {
 }
 
 .overlay#prestasi-83 img{
-  width: 400px;
-  height: 350px;
+  width: 340px;
+  height: 300px;
 }
 
 .overlay#prestasi-13 .isi-overlay .image-content h6 {
