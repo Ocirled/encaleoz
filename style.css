@@ -748,14 +748,14 @@ p {
 .overlay a.arrow-right {
   color: white;
   bottom: -30px;
-  right: 0px;
+  right: 20px;
   font-size: 45px;
   cursor: pointer;
 }
 
 .overlay a.arrow-left {
   color: white;
-  left: 0px;
+  left: 20px;
   bottom: -30px;
   font-size: 45px;
   cursor: pointer;
@@ -763,14 +763,14 @@ p {
 .overlay a.arrow-right-bea {
   color: white;
   bottom: 0px;
-  right: -60px;
+  right: -40px;
   font-size: 45px;
   cursor: pointer;
 }
 
 .overlay a.arrow-left-bea {
   color: white;
-  left: -60px;
+  left: -40px;
   bottom: 0px;
   font-size: 45px;
   cursor: pointer;
@@ -1163,7 +1163,7 @@ a.download {
 }
 
 .overlay#prestasi-92 .isi-overlay .image-content h6 {
-  top: 90px;
+  bottom: -90px;
   right: -20px;
 }
 
@@ -1201,7 +1201,7 @@ a.download {
 }
 
 .overlay#prestasi-102 .isi-overlay .image-content h6 {
-  top: 90px;
+  bottom: -90px;
   right: -20px;
 }
 
