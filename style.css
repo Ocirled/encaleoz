@@ -1239,7 +1239,7 @@ a.download {
   margin: 50px;
   position: relative;
   transition: all 0.3s ease-in-out;
-  transform: rotate(3deg) translate(40px, -590px) scale(.7);
+  transform: rotate(3deg) translate(20px, -590px) scale(.7);
 }
 
 .card-container .prestasi-card .photo-box-33:hover {
@@ -1268,7 +1268,7 @@ a.download {
   height: fit-content;
   margin: 50px;
   position: relative;
-  transform: rotate(3deg) translate(40px, -1150px) scale(.7);
+  transform: rotate(3deg) translate(20px, -1150px) scale(.7);
   transition: all 0.3s ease-in-out;
 }
 
@@ -2751,7 +2751,7 @@ span.thankyou {
   position: fixed;
   z-index: 9;
   bottom: 20px;
-  right: 10px;
+  right: 20px;
   animation: bounce 5s ease-in-out 1s infinite alternate;
   box-shadow: 1px 3px 7px 2px var(--grey-color);
 }
