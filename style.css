@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  /* border: 5px solid red; */
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: var(--grey-color);
 }
 
@@ -1497,21 +1498,6 @@ h1#galeri {
   padding: 30px;
 }
 
-
-a.close-gallery{
-  color: white;
-  background-color: #242538;
-  font-size: 18px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .gallery-container a#fotbar,
 .gallery-container .karwis {
   text-decoration: none;
@@ -1600,13 +1586,13 @@ a.close-gallery{
 .gallery-overlay .swiper-slide {
   width: fit-content;
   height: fit-content;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: self-start;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .gallery-overlay .swiper-pagination-bullet,
@@ -1617,54 +1603,43 @@ a.close-gallery{
 .gallery-overlay .swiper-slide span {
   text-transform: uppercase;
   color: #fff;
-  background: #1b7402;
   padding: 7px 18px 7px 25px;
   display: inline-block;
-  border-radius: 0 20px 20px 0px;
   letter-spacing: 2px;
   font-size: 0.9rem;
 }
 
-.gallery-overlay .swiper-slide--one span,
+.gallery-overlay .swiper-slide--one span {
+  background: #62667f;
+  margin-bottom: 250px;
+  margin-left: 20px;
+}
+
 .gallery-overlay .swiper-slide--two span,
+.gallery-overlay .swiper-slide--three span,
+.gallery-overlay .swiper-slide--four span,
+.gallery-overlay .swiper-slide--five span,
+.gallery-overlay .swiper-slide--six span,
+.gallery-overlay .swiper-slide--seven span ,
+.gallery-overlay .swiper-slide--eight span,
+.gallery-overlay .swiper-slide--nine span,
+.gallery-overlay .swiper-slide--thirteen span,
+.gallery-overlay .swiper-slide--fourteen span,
+.gallery-overlay .swiper-slide--fifteen span,
+.gallery-overlay .swiper-slide--sixteen span,
 .gallery-overlay .swiper-slide--17 span ,
 .gallery-overlay .swiper-slide--18 span {
   background: #62667f;
-  margin-bottom: 20px;
+  margin-bottom: 200px;
+  margin-left: 20px;
 }
 
-.gallery-overlay .swiper-slide--five span ,
-.gallery-overlay .swiper-slide--seven span ,
-  .gallery-overlay .swiper-slide--fifteen span {
-  background: #62667f;
-  margin-bottom: 170px;
-}
-
-.gallery-overlay .swiper-slide--four span ,
-.gallery-overlay .swiper-slide--eight span {
-  background: #62667f;
-  margin-bottom: 150px;
-}
-
-.gallery-overlay .swiper-slide--six span,
 .gallery-overlay .swiper-slide--ten span ,
 .gallery-overlay .swiper-slide--eleven span ,
-.gallery-overlay .swiper-slide--twelve span ,
-.gallery-overlay .swiper-slide--fourteen span {
-  margin-bottom: 160px;
+.gallery-overlay .swiper-slide--twelve span {
   background: #62667f;
-}
-
-.gallery-overlay .swiper-slide--thirteen span,
-.gallery-overlay .swiper-slide--sixteen span{
-  background: #62667f;
-  margin-bottom: 20px;
-}
-
-.gallery-overlay .swiper-slide--three span ,
-.gallery-overlay .swiper-slide--nine span {
-  background: #62667f;
-  margin-bottom: 165px;
+  margin-bottom: 180px;
+  margin-left: 20px;
 }
 
 .gallery-overlay .swiper-slide h2 {
@@ -1675,7 +1650,7 @@ a.close-gallery{
   margin-bottom: 15px;
   background: #242538;
   padding: 7px 18px 7px 25px;
-  border-radius: 0 20px 20px 0px;
+  border-radius: 40px 0px 40px 0px;
 }
 
 .overlay-gallery-img1{
@@ -1684,6 +1659,7 @@ a.close-gallery{
   border: 2px solid #dfe3ee;
   border-radius: 25px;
   overflow: hidden;
+  transform: scale(.8);
 }
 
 .gallery-overlay .swiper-slide--one img,
@@ -1703,12 +1679,12 @@ a.close-gallery{
 .gallery-overlay .swiper-slide--sixteen img ,
 .gallery-overlay .swiper-slide--17 img ,
 .gallery-overlay .swiper-slide--18 img {
-  width: 470px;
+  width: 400px;
   height: 300px;
 }
 
 .gallery-overlay .swiper-slide--four img {
-  width: 470px;
+  width: 400px;
   height: 300px;
   object-fit: cover;
   object-position: 0px -200px;
@@ -1737,6 +1713,20 @@ a.close-gallery{
   bottom: 0;
 }
 
+a.close-gallery{
+  color: white;
+  background-color: #242538;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 .download-gallery{
   width: 50px;
   height: 50px;
@@ -1745,18 +1735,18 @@ a.close-gallery{
   text-align: center;
   background-color: #242538;
   position: absolute;
-  right: 0;
+  right: 17px;
   bottom: 0;
 }
 
 .download-gallery a{
   color: #fff;
   font-size: 20px;
-  transition: all .5s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .download-gallery a:hover{
-  font-size: 23px;
+  color: #c4c4c4;
 }
 
 .gallery-overlay .swiper-3d .swiper-slide-shadow-left,
