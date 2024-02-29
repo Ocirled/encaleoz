@@ -6,7 +6,8 @@
   /* border: 5px solid red; */
 }
 
-body {
+body,
+html {
   overflow-x: hidden;
   background-color: var(--grey-color);
 }
