@@ -747,16 +747,33 @@ p {
 
 .overlay a.arrow-right {
   color: white;
-  bottom: -15px;
-  right: -40px;
+  bottom: -30px;
+  right: 0px;
   font-size: 45px;
+  cursor: pointer;
 }
 
 .overlay a.arrow-left {
   color: white;
-  left: -40px;
-  bottom: -15px;
+  left: 0px;
+  bottom: -30px;
   font-size: 45px;
+  cursor: pointer;
+}
+.overlay a.arrow-right-bea {
+  color: white;
+  bottom: 0px;
+  right: -60px;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.overlay a.arrow-left-bea {
+  color: white;
+  left: -60px;
+  bottom: 0px;
+  font-size: 45px;
+  cursor: pointer;
 }
 
 .overlay a.close-x {
@@ -1428,17 +1445,17 @@ a.download {
 }
 
 .overlay#prestasi-13 .isi-overlay .image-content h6 {
-  top: 130px;
+  bottom: -75px;
   right: -20px;
 }
 
 .overlay#prestasi-23 .isi-overlay .image-content h6 {
-  top: 120px;
+  bottom: -85px;
   right: -80px;
 }
 
 .overlay#prestasi-33 .isi-overlay .image-content h6 {
-  top: 110px;
+  bottom: -90px;
 }
 
 .overlay#prestasi-83 .isi-overlay .image-content p{
