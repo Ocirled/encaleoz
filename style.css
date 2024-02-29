@@ -1492,9 +1492,11 @@ h1#galeri {
 
 .gallery-container{
   width: 400px;
-  height: 300px;
+  height: fit-content;
   margin: 0 auto;
+  padding: 30px;
 }
+
 
 a.close-gallery{
   color: white;
@@ -1515,6 +1517,7 @@ a.close-gallery{
   text-decoration: none;
   color: var(--footer-color);
   font-weight: bolder;
+  display: block;
 }
 
 .gallery-container a#fotbar::after,
@@ -1552,7 +1555,7 @@ a.close-gallery{
 }
 
 .gallery-container .karwis:hover {
-  height: 200px;
+  height: fit-content;
   overflow: visible;
 }
 
@@ -1763,7 +1766,15 @@ a.close-gallery{
 /* Gallery end */
 
 
-h1.thankyou,
+h1.thankyou {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-family: Pacifico;
+  font-size: 48px;
+  margin-top: 200px;
+}
+
 span.thankyou {
   display: block;
   text-align: center;
