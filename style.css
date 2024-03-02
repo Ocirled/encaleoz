@@ -914,7 +914,7 @@ a.download {
   border-radius: 50%;
   background-color: #242538;
   position: absolute;
-  right: -20px;
+  right: -12px;
   top: -50px;
   transition: all 0.3s ease-in-out;
 }
@@ -1656,6 +1656,7 @@ h1#galeri {
   font-size: 1rem;
   line-height: 1.4;
   margin-bottom: 15px;
+  margin-left: 4px;
   background: #242538;
   padding: 7px 18px 7px 25px;
   border-radius: 40px 0px 40px 0px;
