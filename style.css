@@ -387,13 +387,21 @@ span.award span {
   border-radius: 0;
 }
 
-.grid-container .img2:hover img,
+.grid-container .img2:hover img{
+  width: 210px;
+  height: 310px;
+  border-radius: 0;
+}
+
 .grid-container .img3-container:hover img {
   width: 210px;
   height: 310px;
   border-radius: 0;
 }
 
+.grid-container .img3-container:hover .img3{
+  transform: translateX(-40px);
+} 
 /* Sesuaikan sama ukuran foto mreka */
 .grid-container .img4:hover img{
   width: 200px;
@@ -441,7 +449,7 @@ span.award span {
   display: block;
   margin: auto;
   position: relative;
-  z-index: 3;
+  z-index: 5;
 }
 
 .grid-container .img4 {
@@ -816,7 +824,7 @@ h6 {
   font-family: "Pacifico", sans-serif;
   font-size: 20px;
   bottom: -90px;
-  right: -20px;
+  right: 10px;
 }
 
 .overlay img.image-beasiswa-X {
@@ -858,7 +866,7 @@ a.download-x {
   border-radius: 50%;
   background-color: #242538;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: -50px;
   transition: all 0.3s ease-in-out;
 }
@@ -1423,8 +1431,6 @@ a.download {
 .overlay#prestasi-23 img {
   width: 300px;
   height: 300px;
-  object-fit: cover;
-  object-position: top;
   display: block;
   margin: auto;
 }
@@ -1454,7 +1460,7 @@ a.download {
 
 .overlay#prestasi-23 .isi-overlay .image-content h6 {
   bottom: -85px;
-  right: -80px;
+  right: -0px;
 }
 
 .overlay#prestasi-33 .isi-overlay .image-content h6 {
@@ -2772,7 +2778,7 @@ span.thankyou {
   position: fixed;
   z-index: 9;
   bottom: 20px;
-  right: 30px;
+  right: 10px;
   animation: bounce 5s ease-in-out 1s infinite alternate;
   box-shadow: 1px 3px 7px 2px var(--grey-color);
 }
