@@ -899,6 +899,7 @@ a.download:hover i {
   border-radius: 50%;
   width: 30px;
   height: 30px;
+  line-height: 30px;
   top: -10px;
   right: -10px;
 }
@@ -1922,8 +1923,6 @@ span.thankyou {
   .grid-container .img3 img{
     width: 150px;
     height: 150px;
-    object-fit: cover;
-    object-position: 0 -40px;
   }
 
   .grid-container .img6 img {
@@ -1964,10 +1963,11 @@ span.thankyou {
   .grid-container .img3-container:hover .img3 {
     height: fit-content;
     width: fit-content;
+    transform: translateX(10px);
   }
 
   .grid-container .img5-container:hover .img5 {
-    transform: translateX(-40px);
+    transform: translateX(-60px);
     height: fit-content;
     width: fit-content;
   }
@@ -2409,12 +2409,22 @@ span.thankyou {
   }
 
   .overlay img {
-    width: 500px;
-    height: 400px;
+    width: 400px;
+    height: 300px;
+  }
+
+  a.download-x {
+    right: -20px;
+  }
+
+  .overlay a.close-x {
+    font-size: 23px;
+    top: -10px;
+    right: -15px;
   }
 
   .isi-overlay .image-content h6 {
-    bottom: -70px;
+    bottom: -90px;
     right: -20px;
   }
 
@@ -2434,12 +2444,9 @@ span.thankyou {
     z-index: 2;
   }
 
-  .overlay#prestasi-12 img,
-  .overlay#prestasi-22 img,
-  .overlay#prestasi-42 img,
-  .overlay#prestasi-32 img,
-  .overlay#prestasi-72 img {
-    height: 350px;
+  .overlay#prestasi-12 .isi-overlay img {
+    width: 450px;
+    height: 300px;
   }
 
   .card-container .prestasi-card .photo-box-22 {
@@ -2452,7 +2459,7 @@ span.thankyou {
   }
 
   .overlay#prestasi-22 .isi-overlay .image-content h6 {
-    bottom: -60px;
+    bottom: -90px;
   }
 
   .card-container .prestasi-card .photo-box-32 {
@@ -2473,9 +2480,20 @@ span.thankyou {
     z-index: 5;
   }
 
+  .overlay#prestasi-22 img,
+  .overlay#prestasi-32 img,
+  .overlay#prestasi-42 img,
+  .overlay#prestasi-72 img {
+    height: 350px;
+  }
+
   .overlay#prestasi-42 .isi-overlay .image-content h6,
-  .overlay#prestasi-52 .isi-overlay .image-content h6 {
-    bottom: -55px;
+  .overlay#prestasi-52 .isi-overlay .image-content h6,
+  .overlay#prestasi-62 .isi-overlay .image-content h6 ,
+  .overlay#prestasi-92 .isi-overlay .image-content h6 ,
+  .overlay#prestasi-82 .isi-overlay .image-content h6,
+  .overlay#prestasi-102 .isi-overlay .image-content h6 {
+    bottom: -85px;
   }
 
   .card-container .prestasi-card .photo-box-52 {
@@ -2512,16 +2530,6 @@ span.thankyou {
   .card-container .prestasi-card .photo-box-82:hover {
     transform: scale(1.3) translate(170px, -870px) rotate(3deg);
     z-index: 9;
-  }
-
-  .overlay#prestasi-62 .isi-overlay .image-content h6 {
-    top: 80px;
-  }
-
-  .overlay#prestasi-82 .isi-overlay .image-content h6,
-  .overlay#prestasi-92 .isi-overlay .image-content h6,
-  .overlay#prestasi-102 .isi-overlay .image-content h6 {
-    top: 90px;
   }
 
   .card-container .prestasi-card .photo-box-92 {
@@ -2617,9 +2625,19 @@ span.thankyou {
   }
 
   .overlay#prestasi-13 .isi-overlay .image-content h6 {
-    top: 140px;
+    bottom: -85px;
+  }
+
+  .overlay a.close {
+    font-size: 20px;
+    line-height: 34px;
+
   }
   /* akhir kelas xii */
+
+  .symbol#galeri {
+    margin-top: 300px;
+  }
 
   .gallery-container{
     width: 800px;
