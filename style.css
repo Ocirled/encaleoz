@@ -1773,6 +1773,7 @@ h1.thankyou {
   font-family: Pacifico;
   font-size: 48px;
   margin-top: 200px;
+  color: var(--main-color);
 }
 
 span.thankyou {
@@ -1781,6 +1782,7 @@ span.thankyou {
   font-weight: bold;
   font-family: Pacifico;
   font-size: 48px;
+  color: var(--main-color);
 }
 
 
@@ -1893,9 +1895,13 @@ span.thankyou {
     margin-right: 15px;
   }
 
+  .navbar-link {
+    margin-right: 20px;
+  }
+
   .moon img {
     top: 15px;
-    right: 5px;
+    right: 24px;
   }
 
   .kelas .grid-container {
@@ -2217,18 +2223,15 @@ span.thankyou {
     transform: scale(0.4);
   }
 
-  .navbar-link ul {
-    margin-right: 0px;
-  }
-
   .navbar-link ul a{
     font-size: 18px;
+    line-height: 18px;
   }
 
   .moon img {
     width: 35px;
-    top: 19px;
-    right: 10px;
+    top: 24px;
+    right: 25px;
   }
 
   .kelasX img {
@@ -2349,8 +2352,12 @@ span.thankyou {
     margin-right: 40px;
   }
 
+  .navbar-link ul a{
+    font-size: 18px;
+  }
+
   .moon img {
-    top:  18px;
+    top:  24px;
     right: 30px;
   }
 
