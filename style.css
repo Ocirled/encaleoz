@@ -648,7 +648,7 @@ p {
 .kelasX img {
   display: block;
   margin: 20px auto;
-  max-width: 75%;
+  width: 350px;
 }
 
 .overlay .isi-overlay {
@@ -2370,7 +2370,7 @@ span.thankyou {
   }
 
   .kelasX img {
-    width: 80%;
+    width: 650px;
   }
 
   .walkBox1 {
@@ -2796,7 +2796,7 @@ span.thankyou {
   }
 
   .kelasX img {
-    width: 70%;
+    width: 800px;
   }
   .walkBox2 {
     margin-top: 350px;
@@ -2818,7 +2818,7 @@ span.thankyou {
   position: fixed;
   z-index: 9;
   bottom: 20px;
-  right: 10px;
+  right: 12px;
   animation: bounce 5s ease-in-out 1s infinite alternate;
   box-shadow: 1px 3px 7px 2px var(--grey-color);
 }
