@@ -183,7 +183,7 @@ html {
 }
 
 .ngl {
-  margin-top: 20px;
+  margin-top: 150px;
   text-align: center;
 }
 
@@ -352,10 +352,15 @@ span.award span {
 }
 
 .grid-container .img2 img,
-.grid-container .img3-container img ,
+.grid-container .img3-container img {
+  height: 100px;
+  object-fit: cover;
+}
+
 .grid-container .img5-container img {
   height: 100px;
   object-fit: cover;
+  object-position: 0 0;
 }
 
 .grid-container .img6 img,
@@ -491,6 +496,7 @@ h1.another-mem {
   text-align: center;
   font-weight: bold;
   color: var(--main-color);
+  margin-top: 200px;
 }
 
 .carousel {
@@ -607,7 +613,7 @@ p {
 }
 
 .perjalanan-head3 p.fs-6 {
-  margin-top: 300px;
+  margin-top: 500px;
 }
 
 .walkBox1 {
@@ -1545,7 +1551,7 @@ h1#galeri {
 }
 
 .gallery-container .karwis ul li a:hover {
-  color: #3a3c5a;
+  color: #71718a;
 }
 
 .gallery-container .karwis:hover {
@@ -2249,6 +2255,10 @@ span.thankyou {
     margin-top: 100px;
   }
 
+  .perjalanan-head3 {
+    margin-top: -900px;
+  }
+
   .footer-heading p {
     font-size: 20px;
   }
@@ -2290,7 +2300,7 @@ span.thankyou {
   .footer-main-center a::after {
     content: "";
     display: block;
-    border-bottom: 1px solid var(--white-color);
+    border-bottom: 1px solid var(--grey-color);
     width: 50%;
     transform: scale(0);
     transition: 0.3s linear;
@@ -2389,8 +2399,8 @@ span.thankyou {
     margin-top: 500px;
   }
 
-  .perjalanan-head3 p {
-    margin-top: 0px;
+  .perjalanan-head3 {
+    margin-top: -500px;
   }
 
   /* kelas x */
