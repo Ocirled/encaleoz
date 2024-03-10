@@ -404,7 +404,7 @@ span.award span {
 }
 
 .grid-container .img3-container:hover .img3{
-  transform: translateX(-40px);
+  transform: translateX(-70px);
 } 
 /* Sesuaikan sama ukuran foto mreka */
 .grid-container .img4:hover img{
