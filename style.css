@@ -90,9 +90,9 @@ html {
 }
 
 .moon img {
-  width: 28px;
+  width: 35px;
   position: absolute;
-  top: 15px;
+  top: 13px;
   right: 65px;
 }
 
@@ -1905,7 +1905,7 @@ span.thankyou {
   }
 
   .moon img {
-    top: 15px;
+    top: 12px;
     right: 24px;
   }
 
@@ -1938,14 +1938,14 @@ span.thankyou {
 
   .grid-container .img6 img {
     object-fit: cover;
-    object-position: 0 -180px;
+    object-position: 0 0px;
     width: 200px;
     height: 140px;
   }
 
   .grid-container .img7 img {
     object-fit: cover;
-    object-position: 0 -150px;
+    object-position: 0 -0px;
     width: 200px;
     height: 140px;
   }
@@ -1958,6 +1958,7 @@ span.thankyou {
 
   .grid-container .img6:hover img,
   .grid-container .img7:hover img{
+    width: 220px;
     height: 220px;
   }
 
@@ -2366,8 +2367,9 @@ span.thankyou {
   }
 
   .moon img {
-    top:  24px;
-    right: 30px;
+    top:  20px;
+    width: 40px;
+    right: 35px;
   }
 
   .about {
