@@ -1642,7 +1642,11 @@ h1#galeri {
 .gallery-overlay .swiper-slide--fifteen span,
 .gallery-overlay .swiper-slide--sixteen span,
 .gallery-overlay .swiper-slide--17 span ,
-.gallery-overlay .swiper-slide--18 span {
+.gallery-overlay .swiper-slide--18 span ,
+.gallery-overlay .swiper-slide--19 span ,
+.gallery-overlay .swiper-slide--20 span ,
+.gallery-overlay .swiper-slide--21 span ,
+.gallery-overlay .swiper-slide--22 span {
   background: #62667f;
   margin-bottom: 200px;
   margin-left: 20px;
@@ -1693,7 +1697,11 @@ h1#galeri {
 .gallery-overlay .swiper-slide--fifteen img ,
 .gallery-overlay .swiper-slide--sixteen img ,
 .gallery-overlay .swiper-slide--17 img ,
-.gallery-overlay .swiper-slide--18 img {
+.gallery-overlay .swiper-slide--18 img ,
+.gallery-overlay .swiper-slide--19 img ,
+.gallery-overlay .swiper-slide--20 img ,
+.gallery-overlay .swiper-slide--21 img ,
+.gallery-overlay .swiper-slide--22 img {
   width: 400px;
   height: 300px;
 }
@@ -1722,7 +1730,11 @@ h1#galeri {
 .swiper-slide--fifteen .gallery-overlay-content,
 .swiper-slide--sixteen .gallery-overlay-content,
 .swiper-slide--17 .gallery-overlay-content,
-.swiper-slide--18 .gallery-overlay-content{
+.swiper-slide--18 .gallery-overlay-content,
+.swiper-slide--19 .gallery-overlay-content,
+.swiper-slide--20 .gallery-overlay-content,
+.swiper-slide--21 .gallery-overlay-content,
+.swiper-slide--22 .gallery-overlay-content{
   position: absolute;
   left: 4px;
   bottom: 0;
